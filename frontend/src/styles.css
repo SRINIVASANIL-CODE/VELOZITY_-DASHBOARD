@@ -1,0 +1,54 @@
+:root {
+  --bg: #0f172a;
+  --panel: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --accent: #4f46e5;
+  --overdue: #dc2626;
+  --border: #e2e8f0;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: -apple-system, Segoe UI, Roboto, sans-serif; background: #f1f5f9; color: var(--text); }
+.center-screen { display: flex; align-items: center; justify-content: center; height: 100vh; }
+.app-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 24px; background: var(--bg); color: white;
+}
+.brand { color: white; font-weight: 700; text-decoration: none; font-size: 1.1rem; }
+.header-right { display: flex; align-items: center; gap: 16px; }
+.header-right button { background: #334155; color: white; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; }
+main { padding: 24px; max-width: 1200px; margin: 0 auto; }
+.dashboard-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; align-items: start; }
+.panel { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; }
+.stat-cards { display: flex; gap: 14px; flex-wrap: wrap; margin: 16px 0; }
+.stat-card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px; min-width: 120px; display: flex; flex-direction: column; }
+.stat-value { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+.task-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+.task-table th, .task-table td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border); font-size: 0.92rem; }
+.overdue-row { background: #fef2f2; }
+.overdue-tag { margin-left: 8px; font-size: 0.7rem; background: var(--overdue); color: white; padding: 2px 6px; border-radius: 4px; }
+.task-filters { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+.task-filters select, .task-filters input { padding: 6px; border-radius: 6px; border: 1px solid var(--border); }
+.feed-list { list-style: none; padding: 0; margin: 0; max-height: 480px; overflow-y: auto; }
+.feed-item { padding: 8px 0; border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 2px; }
+.feed-message { font-size: 0.9rem; }
+.feed-time { font-size: 0.75rem; color: var(--muted); }
+.feed-project { font-size: 0.75rem; color: var(--accent); }
+.muted { color: var(--muted); }
+.small { font-size: 0.8rem; }
+.notification-bell { position: relative; }
+.notification-bell > button { background: none; border: none; font-size: 1.2rem; cursor: pointer; position: relative; color: white; }
+.badge { position: absolute; top: -4px; right: -8px; background: var(--overdue); color: white; border-radius: 50%; font-size: 0.65rem; padding: 1px 5px; }
+.dropdown { position: absolute; right: 0; top: 28px; width: 300px; background: white; color: var(--text); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); z-index: 10; max-height: 360px; overflow-y: auto; }
+.dropdown-header { display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+.dropdown ul { list-style: none; margin: 0; padding: 0; }
+.dropdown li { padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 0.85rem; cursor: pointer; display: flex; flex-direction: column; gap: 2px; }
+.dropdown li.unread { background: #eef2ff; }
+.login-page { display: flex; align-items: center; justify-content: center; height: 100vh; background: var(--bg); }
+.login-form { background: white; padding: 32px; border-radius: 12px; width: 320px; display: flex; flex-direction: column; gap: 12px; }
+.login-form input { padding: 10px; border-radius: 6px; border: 1px solid var(--border); }
+.login-form button { padding: 10px; border-radius: 6px; border: none; background: var(--accent); color: white; font-weight: 600; cursor: pointer; }
+.error { color: var(--overdue); font-size: 0.85rem; }
+.project-list { list-style: none; padding: 0; }
+.project-list li { padding: 6px 0; border-bottom: 1px solid var(--border); }
+.project-list a { color: var(--accent); text-decoration: none; font-weight: 600; }
